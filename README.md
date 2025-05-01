@@ -1,6 +1,6 @@
-# 🧠 Linux Kernel Module - Real-Time System Health Monitor
+# Linux Kernel Module - Real-Time System Health Monitor
 
-## 👥 Group Info
+##  Group Info
 - **Group Name**: TriSecure
 - **Members**: Firas Abdelgadir, Justin Duru, Sa'Niyah Council
 - **Course**: SCIA 360 - Operating System Security
@@ -8,10 +8,10 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project implements a Linux Kernel Module that collects system health metrics, including:
-- **Memory usage** (completed ✅)
+- **Memory usage** (completed )
 - **CPU load** (to be implemented)
 - **Disk I/O statistics** (to be implemented)
 
@@ -23,7 +23,7 @@ These metrics are:
 
 ---
 
-## 🛠️ How to Build the Module
+##  How to Build the Module
 
 ### 1. Install dependencies:
 ```bash
