@@ -1,31 +1,31 @@
-# Linux Kernel Module - Real-Time System Health Monitor
+# TriSecure: Linux Kernel Module for Real-Time Health Monitoring
 
-##  Group Info
-- **Group Name**: TriSecure
-- **Members**: Firas Abdelgadir, Justin Duru, Sa'Niyah Council
-- **Course**: SCIA 360 - Operating System Security
-- **Project**: Real-Time System Health Monitoring Kernel Module
-
----
-
-##  Project Overview
-
-This project implements a Linux Kernel Module that collects system health metrics, including:
-- **Memory usage** (completed )
-- **CPU load** (to be implemented)
-- **Disk I/O statistics** (to be implemented)
-
-These metrics are:
-- Monitored in real-time using a **kernel timer**
-- Compared against **configurable thresholds**
-- Exposed to user-space via the **`/proc/sys_health`** file
-- Logged via **`printk()` alerts** when thresholds are exceeded
+##  Team Members
+- Firas Abdelgadir
+- Justin Duru
+- Sa’Niyah Council  
+- **Course**: SCIA 360 - Operating System Security  
+- **Project**: Linux Kernel Module for System Health Monitoring  
 
 ---
 
-##  How to Build the Module
+## Project Overview
 
-### 1. Install dependencies:
-```bash
-sudo apt update
-sudo apt install build-essential linux-headers-$(uname -r)
+This project implements a Linux Kernel Module that monitors **real-time system health metrics**, including:
+
+-  Memory usage
+-  CPU load
+- (Partial) Disk I/O activity
+
+The goal is to track system resource usage, compare it against thresholds, and generate kernel alerts when those thresholds are exceeded — providing early warnings before performance or security issues arise.
+
+---
+
+##  Features & Design
+
+###  Modular Monitoring
+- Uses kernel timers to sample system metrics every **5 seconds**
+- Compares metrics against **dynamic thresholds** passed via `insmod`
+
+###  `/proc` Interface
+- Exposes health info at:  
